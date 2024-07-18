@@ -67,10 +67,10 @@ export default function Contact() {
                 className="flexNullCenter flexColumn"
               >
                 <ContactImgBox>
-                  <img src={ContactImg1} alt="office" className="radius6" />
+                  <Image src={ContactImg1} alt="office" className="radius6" />
                 </ContactImgBox>
                 <ContactImgBox>
-                  <img src={ContactImg2} alt="office" className="radius6" />
+                  <Image src={ContactImg2} alt="office" className="radius6" />
                 </ContactImgBox>
               </div>
               <div style={{ width: "50%" }}>
@@ -144,7 +144,7 @@ const SumbitWrapper = styled.div`
 `;
 
 const Image = styled.img`
-  width: 85%;
+  width: 100%;
   @media (max-width: 768) {
     width: unset;
   }
