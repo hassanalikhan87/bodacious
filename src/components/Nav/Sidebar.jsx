@@ -10,10 +10,8 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
     <Wrapper className="animate darkBg" sidebarOpen={sidebarOpen}>
       <SidebarHeader className="flexSpaceCenter">
         <div className="flexNullCenter">
-          <LogoIcon />
-          <h1 className="whiteColor font20" style={{ marginLeft: "15px" }}>
-            Bodacious Bulls
-          </h1>
+          <LogoIcon className="whiteColor" />
+          <h1 className="whiteColor font20">Bodacious Bulls</h1>
         </div>
         <CloseBtn
           onClick={() => toggleSidebar(!sidebarOpen)}
