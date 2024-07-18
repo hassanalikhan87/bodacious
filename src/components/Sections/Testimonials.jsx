@@ -5,15 +5,16 @@ import BlogBox from "../Elements/BlogBox";
 import FullButton from "../Buttons/FullButton";
 import TestimonialSlider from "../Elements/TestimonialSlider";
 
-export default function Blog() {
+export default function Testimonials() {
   return (
     <Wrapper id="blog">
-      <div className="whiteBg">
+      {/* <div className="whiteBg">
         <div className="container">
           <HeaderInfo>
             <h1 className="font40 extraBold">Our Blog Stories</h1>
             <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut
               <br />
               labore et dolore magna aliquyam erat, sed diam voluptua.
             </p>
@@ -82,13 +83,14 @@ export default function Blog() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="lightBg" style={{padding: '50px 0'}}>
+      </div> */}
+      <div className="whiteBg" style={{ padding: "50px 0" }}>
         <div className="container">
           <HeaderInfo>
             <h1 className="font40 extraBold">What They Say?</h1>
             <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut
               <br />
               labore et dolore magna aliquyam erat, sed diam voluptua.
             </p>

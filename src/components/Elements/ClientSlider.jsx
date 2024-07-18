@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
 // Assets
-import ClientLogo01 from "../../assets/img/clients/logo01.svg"
+import ClientLogo01 from "../../assets/img/clients/logo01.svg";
 import ClientLogo02 from "../../assets/img/clients/logo02.svg";
 import ClientLogo03 from "../../assets/img/clients/logo03.svg";
 import ClientLogo04 from "../../assets/img/clients/logo04.svg";
@@ -28,14 +28,14 @@ export default function ClientSlider() {
         breakpoint: 600,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
+          slidesToScroll: 3,
         },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
         },
       },
     ],
