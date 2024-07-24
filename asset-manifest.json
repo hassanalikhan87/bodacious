@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/bodacious/static/css/main.2bf725b0.chunk.css",
-    "main.js": "/bodacious/static/js/main.75f7babb.chunk.js",
-    "main.js.map": "/bodacious/static/js/main.75f7babb.chunk.js.map",
+    "main.js": "/bodacious/static/js/main.a39bfc89.chunk.js",
+    "main.js.map": "/bodacious/static/js/main.a39bfc89.chunk.js.map",
     "runtime-main.js": "/bodacious/static/js/runtime-main.735feb4a.js",
     "runtime-main.js.map": "/bodacious/static/js/runtime-main.735feb4a.js.map",
     "static/css/2.25da1874.chunk.css": "/bodacious/static/css/2.25da1874.chunk.css",
@@ -27,6 +27,6 @@
     "static/css/2.25da1874.chunk.css",
     "static/js/2.ba1978de.chunk.js",
     "static/css/main.2bf725b0.chunk.css",
-    "static/js/main.75f7babb.chunk.js"
+    "static/js/main.a39bfc89.chunk.js"
   ]
 }
