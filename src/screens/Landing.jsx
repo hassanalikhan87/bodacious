@@ -1,23 +1,22 @@
 import React from "react";
 // Sections
 import TopNavbar from "../components/Nav/TopNavbar";
-import Header from "../components/Sections/Header";
+import Company from "../components/Sections/Company";
 import Services from "../components/Sections/Services";
-import Projects from "../components/Sections/Projects";
+import Portfolio from "../components/Sections/Portfolio";
 import Testimonials from "../components/Sections/Testimonials";
-// import Pricing from "../components/Sections/Pricing";
 import Contact from "../components/Sections/Contact";
 import Footer from "../components/Sections/Footer";
+import { landingData } from "./landing.data";
 
 export default function Landing() {
   return (
     <>
-      <TopNavbar />
-      <Header />
-      <Services />
-      <Projects />
+      <TopNavbar data={landingData.navigation} />
+      <Company data={landingData.company} />
+      <Services data={landingData.services} />
+      <Portfolio data={landingData.portfolio} />
       <Testimonials />
-      {/* <Pricing /> */}
       <Contact />
       <Footer />
     </>

@@ -1,17 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import { createRoot } from "react-dom/client";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./style/flexboxgrid.min.css";
-import './style/index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import "./style/index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
-ReactDOM.render(
-  <>
+// Create a root.
+const container = document.getElementById("root");
+const root = createRoot(container);
+
+// Initial render.
+root.render(
+  <React.StrictMode>
     <App />
-  </>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

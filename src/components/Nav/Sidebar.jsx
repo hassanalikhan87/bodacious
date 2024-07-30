@@ -5,7 +5,8 @@ import { Link } from "react-scroll";
 import CloseIcon from "../../assets/svg/CloseIcon";
 import LogoIcon from "../../assets/svg/Logo";
 
-export default function Sidebar({ sidebarOpen, toggleSidebar }) {
+export default function Sidebar({ data, sidebarOpen, toggleSidebar }) {
+  const { main, side } = data;
   return (
     <Wrapper className="animate darkBg" sidebarOpen={sidebarOpen}>
       <SidebarHeader className="flexSpaceCenter">
@@ -22,96 +23,40 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
       </SidebarHeader>
 
       <UlStyle className="flexNullCenter flexColumn">
-        <li className="semiBold font15 pointer">
-          <Link
-            onClick={() => toggleSidebar(!sidebarOpen)}
-            activeClass="active"
-            className="whiteColor"
-            style={{ padding: "10px 15px" }}
-            to="home"
-            spy={true}
-            smooth={true}
-            offset={-60}
-          >
-            Home
-          </Link>
-        </li>
-        <li className="semiBold font15 pointer">
-          <Link
-            onClick={() => toggleSidebar(!sidebarOpen)}
-            activeClass="active"
-            className="whiteColor"
-            style={{ padding: "10px 15px" }}
-            to="services"
-            spy={true}
-            smooth={true}
-            offset={-60}
-          >
-            Services
-          </Link>
-        </li>
-        <li className="semiBold font15 pointer">
-          <Link
-            onClick={() => toggleSidebar(!sidebarOpen)}
-            activeClass="active"
-            className="whiteColor"
-            style={{ padding: "10px 15px" }}
-            to="projects"
-            spy={true}
-            smooth={true}
-            offset={-60}
-          >
-            Projects
-          </Link>
-        </li>
-        <li className="semiBold font15 pointer">
-          <Link
-            onClick={() => toggleSidebar(!sidebarOpen)}
-            activeClass="active"
-            className="whiteColor"
-            style={{ padding: "10px 15px" }}
-            to="blog"
-            spy={true}
-            smooth={true}
-            offset={-60}
-          >
-            Case Study
-          </Link>
-        </li>
-        <li className="semiBold font15 pointer">
-          <Link
-            onClick={() => toggleSidebar(!sidebarOpen)}
-            activeClass="active"
-            className="whiteColor"
-            style={{ padding: "10px 15px" }}
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={-60}
-          >
-            Contact
-          </Link>
-        </li>
+        {main.map((nav, i) => {
+          return (
+            <li className="semiBold font15 pointer">
+              <Link
+                onClick={() => toggleSidebar(!sidebarOpen)}
+                activeClass="active"
+                className="whiteColor"
+                style={{ padding: "10px 15px" }}
+                to={nav.to}
+                spy={true}
+                smooth={true}
+                offset={-60}
+              >
+                {nav.text}
+              </Link>
+            </li>
+          );
+        })}
       </UlStyle>
       <UlStyle className="flexNullenter">
-        {/* <li className="semiBold font15 pointer">
-          <a
-            href="/"
-            style={{ padding: "10px 30px 10px 0" }}
-            className="whiteColor"
-          >
-            Log in
-          </a>
-        </li> */}
-        <li className="semiBold font15 pointer flexCenter">
-          <a
-            href="/"
-            className="radius8 lightBg"
-            style={{ padding: "10px 15px" }}
-          >
-            Get Started
-          </a>
-        </li>
+        {side.map((nav, i) => {
+          return (
+            <li className="semiBold font15 pointer flexCenter">
+              <a
+                key={i}
+                href={nav.href}
+                className="radius8 lightBg"
+                style={{ padding: "10px 15px" }}
+              >
+                {nav.text}
+              </a>
+            </li>
+          );
+        })}
       </UlStyle>
     </Wrapper>
   );

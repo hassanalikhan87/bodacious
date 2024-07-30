@@ -272,3 +272,7 @@
   .tealBg {
     background-color: rgb(76, 213, 197);
   }
+
+  .preLine {
+    white-space: pre-line;
+  }

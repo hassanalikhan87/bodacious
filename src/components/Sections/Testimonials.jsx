@@ -7,7 +7,7 @@ import TestimonialSlider from "../Elements/TestimonialSlider";
 
 export default function Testimonials() {
   return (
-    <Wrapper id="blog">
+    <Wrapper id="clients">
       {/* <div className="whiteBg">
         <div className="container">
           <HeaderInfo>

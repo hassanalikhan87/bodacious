@@ -8,7 +8,7 @@ import Backdrop from "../Elements/Backdrop";
 import LogoIcon from "../../assets/svg/Logo";
 import BurgerIcon from "../../assets/svg/BurgerIcon";
 
-export default function TopNavbar() {
+export default function TopNavbar({ data }) {
   const [y, setY] = useState(window.scrollY);
   const [sidebarOpen, toggleSidebar] = useState(false);
 
@@ -19,9 +19,15 @@ export default function TopNavbar() {
     };
   }, [y]);
 
+  const { main, side } = data;
+
   return (
     <>
-      <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
+      <Sidebar
+        data={data}
+        sidebarOpen={sidebarOpen}
+        toggleSidebar={toggleSidebar}
+      />
       {sidebarOpen && <Backdrop toggleSidebar={toggleSidebar} />}
       <Wrapper
         className="flexCenter animate whiteBg"
@@ -39,82 +45,39 @@ export default function TopNavbar() {
             <BurgerIcon />
           </BurderWrapper>
           <UlWrapper className="flexNullCenter">
-            <li className="semiBold font15 pointer">
-              <Link
-                activeClass="active"
-                style={{ padding: "10px 15px" }}
-                to="home"
-                spy={true}
-                smooth={true}
-                offset={-80}
-              >
-                Home
-              </Link>
-            </li>
-            <li className="semiBold font15 pointer">
-              <Link
-                activeClass="active"
-                style={{ padding: "10px 15px" }}
-                to="services"
-                spy={true}
-                smooth={true}
-                offset={-80}
-              >
-                Services
-              </Link>
-            </li>
-            <li className="semiBold font15 pointer">
-              <Link
-                activeClass="active"
-                style={{ padding: "10px 15px" }}
-                to="projects"
-                spy={true}
-                smooth={true}
-                offset={-80}
-              >
-                Projects
-              </Link>
-            </li>
-            <li className="semiBold font15 pointer">
-              <Link
-                activeClass="active"
-                style={{ padding: "10px 15px" }}
-                to="blog"
-                spy={true}
-                smooth={true}
-                offset={-80}
-              >
-                Case Study
-              </Link>
-            </li>
-            <li className="semiBold font15 pointer">
-              <Link
-                activeClass="active"
-                style={{ padding: "10px 15px" }}
-                to="contact"
-                spy={true}
-                smooth={true}
-                offset={-80}
-              >
-                Contact
-              </Link>
-            </li>
+            {main.map((nav, i) => {
+              return (
+                <li className="semiBold font15 pointer">
+                  <Link
+                    key={i}
+                    activeClass="active"
+                    style={{ padding: "10px 15px" }}
+                    to={nav.to}
+                    spy={true}
+                    smooth={true}
+                    offset={-80}
+                  >
+                    {nav.text}
+                  </Link>
+                </li>
+              );
+            })}
           </UlWrapper>
           <UlWrapperRight className="flexNullCenter">
-            {/* <li className="semiBold font15 pointer">
-              <a href="/" style={{ padding: "10px 30px 10px 0" }}>
-                Log in
-              </a>
-            </li> */}
-            <li className="semiBold font15 pointer flexCenter">
-              <a
-                href="/"
-                className="radius8 whiteColor tealBg"
-                style={{ padding: "10px 15px" }}
-              >
-                Get Started
-              </a>
-            </li>
+            {side.map((nav, i) => {
+              return (
+                <li className="semiBold font15 pointer flexCenter">
+                  <a
+                    key={i}
+                    href={nav.href}
+                    className="radius8 whiteColor tealBg"
+                    style={{ padding: "10px 15px" }}
+                  >
+                    {nav.text}
+                  </a>
+                </li>
+              );
+            })}
           </UlWrapperRight>
         </NavInner>
       </Wrapper>

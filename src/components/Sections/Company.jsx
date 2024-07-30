@@ -7,20 +7,16 @@ import HeaderImage from "../../assets/img/header-img.png";
 import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
 
-export default function Header() {
+export default function Company({ data }) {
+  const { id, mainHeading, description, cta, quote } = data;
   return (
-    <Wrapper id="home" className="container flexSpaceCenter">
+    <Wrapper id={id} className="container flexSpaceCenter">
       <LeftSide className="flexCenter">
         <div>
-          <h1 className="extraBold font60">We are Software Company.</h1>
-          <HeaderP className="font13 semiBold">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum.
-          </HeaderP>
+          <h1 className="extraBold font60">{mainHeading}</h1>
+          <HeaderP className="font13 semiBold">{description}</HeaderP>
           <BtnWrapper>
-            <FullButton title="Get Started" />
+            <FullButton title={cta.text} />
           </BtnWrapper>
         </div>
       </LeftSide>
@@ -38,16 +34,13 @@ export default function Header() {
             </QuotesWrapper>
             <div>
               <p className="font15 whiteColor">
-                <em>
-                  Friends, such as we desire, are dreams and fables. Friendship
-                  demands the ability to do without it.
-                </em>
+                <em>{quote.text}</em>
               </p>
               <p
                 className="font13 orangeColor textRight"
                 style={{ marginTop: "10px" }}
               >
-                Ralph Waldo Emerson
+                {quote.author}
               </p>
             </div>
           </QuoteWrapper>
