@@ -5,9 +5,10 @@ import styled from "styled-components";
 // import FullButton from "../Buttons/FullButton";
 import TestimonialSlider from "../Elements/TestimonialSlider";
 
-export default function Testimonials() {
+export default function Testimonials({ data }) {
+  const { id, mainHeading, description, testimonialsList } = data;
   return (
-    <Wrapper id="testimonials">
+    <Wrapper id={id}>
       {/* <div className="whiteBg">
         <div className="container">
           <HeaderInfo>
@@ -87,15 +88,10 @@ export default function Testimonials() {
       <div className="whiteBg" style={{ padding: "50px 0" }}>
         <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold">What They Say?</h1>
-            <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut
-              <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
-            </p>
+            <h1 className="font40 extraBold">{mainHeading}</h1>
+            <p className="font13 preLine">{description}</p>
           </HeaderInfo>
-          <TestimonialSlider />
+          <TestimonialSlider data={testimonialsList} />
         </div>
       </div>
     </Wrapper>

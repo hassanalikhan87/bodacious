@@ -11,12 +11,12 @@ import ServiceBox from "../Elements/ServiceBox";
 // import AddImage4 from "../../assets/img/add/4.png";
 
 export default function Services({ data }) {
-  const { id, mainHeading, description, servicesList } = data;
+  const { id, mainHeading, description, servicesList, clientsList } = data;
   return (
     <Wrapper id={id}>
       <div className="lightBg" style={{ padding: "50px 0" }}>
         <div className="container">
-          <ClientSlider />
+          <ClientSlider data={clientsList} />
         </div>
       </div>
       <div className="whiteBg" style={{ padding: "60px 0" }}>

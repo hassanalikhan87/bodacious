@@ -16,7 +16,7 @@ export default function Landing() {
       <Company data={landingData.company} />
       <Services data={landingData.services} />
       <Portfolio data={landingData.portfolio} />
-      <Testimonials />
+      <Testimonials data={landingData.testimonials} />
       <Contact />
       <Footer />
     </>
