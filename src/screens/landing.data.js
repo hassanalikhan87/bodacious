@@ -11,7 +11,7 @@ export const landingData = {
       { text: "Company", to: "company" },
       { text: "Services", to: "services" },
       { text: "Portfolio", to: "portfolio" },
-      { text: "Clients", to: "clients" },
+      { text: "Testimonials", to: "testimonials" },
       { text: "Contact", to: "contact" },
     ],
     side: [{ text: "Get Started", href: "/" }],
