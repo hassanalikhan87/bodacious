@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styled from "styled-components";
 // Components
 import ProjectBox from "../Elements/ProjectBox";
@@ -9,17 +9,19 @@ import FullButton from "../Buttons/FullButton";
 export default function Portfolio({ data }) {
   const { id, mainHeading, description, projectsList } = data;
   const [projectsCount, setProjectsCount] = useState(6);
+  const myRef = useRef(null);
 
   const handleLoadMore = () => {
     if (projectsCount < projectsList.length) {
       setProjectsCount(projectsList.length);
     } else {
       setProjectsCount(6);
+      myRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <Wrapper id={id}>
+    <Wrapper id={id} ref={myRef}>
       <div className="whiteBg">
         <div className="container">
           <HeaderInfo>
