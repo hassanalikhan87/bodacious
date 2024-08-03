@@ -50,9 +50,9 @@ export default function Portfolio({ data }) {
                 <FullButton title={"Show More"} action={handleShowMore} />
               ) : (
                 <StyledButton
-                  className="animate pointer radius8"
-                  activeClass="active"
-                  style={{ padding: "10px 15px" }}
+                  className="pointer radius8"
+                  smooth={true}
+                  spy={true}
                   to={"portfolio"}
                   offset={-80}
                   onClick={handleShowLess}
