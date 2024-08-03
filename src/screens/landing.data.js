@@ -25,7 +25,7 @@ export const landingData = {
   },
   company: {
     id: "company",
-    mainHeading: "We are Software Company.",
+    mainHeading: "We are a Software Company.",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
     cta: {
@@ -38,7 +38,7 @@ export const landingData = {
   },
   services: {
     id: "services",
-    mainHeading: "Our Awesome Services",
+    mainHeading: "Services",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut \n labore et dolore magna aliquyam erat, sed diam voluptua.",
     servicesList: [

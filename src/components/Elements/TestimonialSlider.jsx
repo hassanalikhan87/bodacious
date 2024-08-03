@@ -1,32 +1,58 @@
 import React from "react";
-import styled from "styled-components";
-import Marquee from "react-fast-marquee";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 // Components
 import TestimonialBox from "../Elements/TestimonialBox";
+import styled from "styled-components";
 
 export default function TestimonialSlider({ data }) {
+  const settings = {
+    dots: true,
+    autoplay: true,
+    infinite: true,
+    pauseOnHover: true,
+    autoplaySpeed: 1500,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 860,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   return (
-    <div>
-      <Marquee speed={250} pauseOnHover autoFill>
+    <div className="slider-container">
+      <StyledSlider {...settings}>
         {data.map((testimonial, i) => {
-          return (
-            <LogoWrapper className="flexCenter">
-              <TestimonialBox {...testimonial} />
-            </LogoWrapper>
-          );
+          return <TestimonialBox key={i} {...testimonial} />;
         })}
-      </Marquee>
+      </StyledSlider>
     </div>
   );
 }
 
-const LogoWrapper = styled.div`
-  width: 100%;
-  margin: 0 30px;
-  cursor: pointer;
-  :focus-visible {
-    outline: none;
-    border: 0px;
+const StyledSlider = styled(Slider)`
+  @media (min-width: 860px) {
+    button {
+      &:before {
+        color: #7620ff;
+        opacity: 1;
+      }
+    }
   }
 `;

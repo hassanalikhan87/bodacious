@@ -8,99 +8,20 @@ import TestimonialSlider from "../Elements/TestimonialSlider";
 export default function Testimonials({ data }) {
   const { id, mainHeading, description, testimonialsList } = data;
   return (
-    <Wrapper id={id}>
-      {/* <div className="whiteBg">
-        <div className="container">
-          <HeaderInfo>
-            <h1 className="font40 extraBold">Our Blog Stories</h1>
-            <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut
-              <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
-            </p>
-          </HeaderInfo>
-          <div className="row textCenter">
-            <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-              <BlogBox
-                title="New Office!"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
-                tag="company"
-                author="Luke Skywalker, 2 days ago"
-                action={() => alert("clicked")}
-              />
-            </div>
-            <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-              <BlogBox
-                title="New Office!"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
-                tag="company"
-                author="Luke Skywalker, 2 days ago"
-                action={() => alert("clicked")}
-              />
-            </div>
-            <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-              <BlogBox
-                title="New Office!"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
-                tag="company"
-                author="Luke Skywalker, 2 days ago"
-                action={() => alert("clicked")}
-              />
-            </div>
-          </div>
-          <div className="row textCenter">
-            <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-              <BlogBox
-                title="New Office!"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
-                tag="company"
-                author="Luke Skywalker, 2 days ago"
-                action={() => alert("clicked")}
-              />
-            </div>
-            <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-              <BlogBox
-                title="New Office!"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
-                tag="company"
-                author="Luke Skywalker, 2 days ago"
-                action={() => alert("clicked")}
-              />
-            </div>
-            <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-              <BlogBox
-                title="New Office!"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
-                tag="company"
-                author="Luke Skywalker, 2 days ago"
-                action={() => alert("clicked")}
-              />
-            </div>
-          </div>
-          <div className="row flexCenter">
-            <div style={{ margin: "50px 0", width: "200px" }}>
-              <FullButton title="Load More" action={() => alert("clicked")} />
-            </div>
-          </div>
-        </div>
-      </div> */}
-      <div className="whiteBg" style={{ padding: "50px 0" }}>
-        <div className="container">
-          <HeaderInfo>
-            <h1 className="font40 extraBold">{mainHeading}</h1>
-            <p className="font13 preLine">{description}</p>
-          </HeaderInfo>
-          <TestimonialSlider data={testimonialsList} />
-        </div>
+    <Wrapper id={id} className="whiteBg" style={{ padding: "50px 0" }}>
+      <div className="container">
+        <HeaderInfo>
+          <h1 className="font40 extraBold">{mainHeading}</h1>
+          <p className="font13 preLine">{description}</p>
+        </HeaderInfo>
+        <TestimonialSlider data={testimonialsList} />
       </div>
     </Wrapper>
   );
 }
 
 const Wrapper = styled.section`
-  width: 100%;
-  padding-top: 20px;
+  padding: 50px 0;
 `;
 const HeaderInfo = styled.div`
   margin-bottom: 30px;

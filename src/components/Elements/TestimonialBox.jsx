@@ -20,9 +20,8 @@ export default function TestimonialBox({ text, author }) {
 }
 
 const Wrapper = styled.div`
-  max-width: 350px;
   padding: 20px 30px;
-  margin-top: 30px;
+  margin: 30px 20px;
 `;
 const QuoteWrapper = styled.div`
   position: relative;
