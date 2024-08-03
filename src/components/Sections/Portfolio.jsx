@@ -51,8 +51,6 @@ export default function Portfolio({ data }) {
               ) : (
                 <StyledButton
                   className="pointer radius8"
-                  smooth={true}
-                  spy={true}
                   to={"portfolio"}
                   offset={-80}
                   onClick={handleShowLess}
