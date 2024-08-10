@@ -32,14 +32,10 @@ export const TYPOGRAPHY = {
   `,
   h2: css`
     font-family: ${FONT.stack1};
-    font-size: 16px;
+    font-size: 18px;
     line-height: 20px;
-    letter-spacing: 0em;
+    letter-spacing: 1px;
     margin: 0;
-    ${MEDIA_QUERY.above.desktop} {
-      font-size: 14px;
-      line-height: 20px;
-    }
   `,
   p: css`
     font-family: ${FONT.stack2};

@@ -20,7 +20,7 @@ function SvgComponent(props) {
         fillRule="evenodd"
         clipRule="evenodd"
         d="M7.40588 7.40802H111.109V74.0748H7.40588V7.40802Z"
-        fill="#ED1C24"
+        fill="#555555"
       />
       <path
         fillRule="evenodd"

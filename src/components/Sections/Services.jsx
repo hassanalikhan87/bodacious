@@ -40,7 +40,7 @@ export default function Services({ data }) {
 const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
-  background-color: ${COLOR.fatRed};
+  background-color: ${COLOR.fatDark};
   min-height: calc(100vh - 80px);
   ${MEDIA_QUERY.above.desktop} {
     margin: 0 auto;
@@ -94,7 +94,10 @@ const HeaderInfo = styled.div`
 const Heading = styled.h1`
   ${TYPOGRAPHY.h1}
   color: ${COLOR.fatLight};
-  padding: ${SPACING.s4} 0;
+  background-color: ${COLOR.fatRed};
+  margin: ${SPACING.s4} 0;
+  padding: ${SPACING.s4};
+  width: 25vw;
 `;
 
 const Description = styled.p`

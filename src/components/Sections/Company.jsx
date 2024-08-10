@@ -11,6 +11,7 @@ import { MEDIA_QUERY } from "../../constants/styles/media-query";
 import { SPACING } from "../../constants/styles/spacing";
 import { SIZE } from "../../constants/styles/sizes";
 import { TYPOGRAPHY } from "../../constants/styles/typography";
+// import CoverImage from "../../assets/svg/Company/CoverImage";
 
 export default function Company({ data }) {
   const { id, mainHeading, description, cta, quote } = data;
@@ -35,6 +36,7 @@ export default function Company({ data }) {
           <DotsWrapper>
             <Dots />
           </DotsWrapper>
+          {/* <CoverImage /> */}
           <Img src={HeaderImage} alt="office" />
           <QuoteWrapper>
             <QuotesWrapper>
