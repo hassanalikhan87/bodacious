@@ -5,11 +5,11 @@ import QuoteIcon from "../../assets/svg/Quotes";
 
 export default function TestimonialBox({ text, author }) {
   return (
-    <Wrapper className="darkBg radius8 flexNullCenter flexColumn">
+    <Wrapper className="purpleBg radius8 flexNullCenter flexColumn">
       <QuoteWrapper>
         <QuoteIcon />
       </QuoteWrapper>
-      <p className="whiteColor font13" style={{ paddingBottom: "30px" }}>
+      <p className="whiteColor font14" style={{ paddingBottom: "30px" }}>
         {text}
       </p>
       <p className="orangeColor font13" style={{ alignSelf: "flex-end" }}>

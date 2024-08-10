@@ -4,6 +4,7 @@ import styled from "styled-components";
 // import BlogBox from "../Elements/BlogBox";
 // import FullButton from "../Buttons/FullButton";
 import TestimonialSlider from "../Elements/TestimonialSlider";
+import { SPACING } from "../../constants/styles/spacing";
 
 export default function Testimonials({ data }) {
   const { id, mainHeading, description, testimonialsList } = data;
@@ -21,7 +22,8 @@ export default function Testimonials({ data }) {
 }
 
 const Wrapper = styled.section`
-  padding: 50px 0;
+  width: 100%;
+  padding: ${SPACING.s10} ${SPACING.s15};
 `;
 const HeaderInfo = styled.div`
   margin-bottom: 30px;

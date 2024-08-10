@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import Marquee from "react-fast-marquee";
+import { SPACING } from "../../constants/styles/spacing";
 
 export default function ClientSlider({ data }) {
   return (
-    <Marquee speed={250} pauseOnHover autoFill>
+    <Marquee speed={100} pauseOnHover autoFill>
       {data.map((img, i) => {
         return (
           <LogoWrapper key={i} className="flexCenter">
@@ -28,5 +29,5 @@ const LogoWrapper = styled.div`
 const ImgStyle = styled.img`
   width: 100%;
   height: 100%;
-  padding: 10%;
+  margin: 0 ${SPACING.s6};
 `;

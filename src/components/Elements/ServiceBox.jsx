@@ -1,61 +1,73 @@
 import React from "react";
 import styled from "styled-components";
 // Assets
-import RollerIcon from "../../assets/svg/Services/RollerIcon";
-import MonitorIcon from "../../assets/svg/Services/MonitorIcon";
-import BrowserIcon from "../../assets/svg/Services/BrowserIcon";
-import PrinterIcon from "../../assets/svg/Services/PrinterIcon";
+import SoftwareDevIcon from "../../assets/svg/Services/SoftwareDevIcon";
+import WebDevelopmentIcon from "../../assets/svg/Services/WebDevelopmentIcon";
+import MobileDevIcon from "../../assets/svg/Services/MobileDevIcon";
+import DigitalStrategyIcon from "../../assets/svg/Services/DigitalStrategyIcon";
+import VideoCallIcon from "../../assets/svg/Services/VideoCallIcon";
+import ProductDesignIcon from "../../assets/svg/Services/ProductDesign";
+
+import { COLOR } from "../../constants/styles/color";
+import { TYPOGRAPHY } from "../../constants/styles/typography";
 
 export default function ServiceBox({ icon, title, subtitle }) {
   let getIcon;
 
   switch (icon) {
-    case "roller":
-      getIcon = <RollerIcon />;
+    case "software":
+      getIcon = <SoftwareDevIcon />;
       break;
-    case "monitor":
-      getIcon = <MonitorIcon />;
+    case "web-development":
+      getIcon = <WebDevelopmentIcon />;
       break;
-    case "browser":
-      getIcon = <BrowserIcon />;
+    case "mobile":
+      getIcon = <MobileDevIcon />;
       break;
-    case "printer":
-      getIcon = <PrinterIcon />;
+    case "strategy":
+      getIcon = <DigitalStrategyIcon />;
+      break;
+    case "design":
+      getIcon = <ProductDesignIcon />;
+      break;
+    case "teams":
+      getIcon = <VideoCallIcon />;
       break;
     default:
-      getIcon = <RollerIcon />;
+      getIcon = <SoftwareDevIcon />;
       break;
   }
 
   return (
-    <Wrapper className="flex flexColumn">
+    <Wrapper className="test">
       <IconStyle>{getIcon}</IconStyle>
-      <TitleStyle className="font20 extraBold">{title}</TitleStyle>
-      <SubtitleStyle className="font13">{subtitle}</SubtitleStyle>
+      <TitleStyle>{title}</TitleStyle>
+      <SubtitleStyle>{subtitle}</SubtitleStyle>
     </Wrapper>
   );
 }
 
 const Wrapper = styled.div`
-  width: 100%;
-  @media (max-width: 860px) {
-    align-items: center;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: ${COLOR.fatLight};
 `;
 const IconStyle = styled.div`
-  @media (max-width: 860px) {
-    margin: 0 auto;
-  }
+  margin: 0 auto;
 `;
 const TitleStyle = styled.h2`
+  ${TYPOGRAPHY.h2}
   width: 100%;
   max-width: 300px;
-  padding: 40px 0;
+  margin: 40px 0;
   @media (max-width: 860px) {
-    padding: 20px 0;
+    margin: 20px 0;
   }
 `;
 const SubtitleStyle = styled.p`
+  ${TYPOGRAPHY.p}
   width: 100%;
-  max-width: 300px;
+  margin: 0;
 `;

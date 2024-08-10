@@ -25,58 +25,58 @@ export const landingData = {
   },
   company: {
     id: "company",
-    mainHeading: "We are a Software Company.",
+    mainHeading: "Digital Softwares and Solutions",
     description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+      "Bodacious Bulls is powered by experts and professionals who are on a mission to turn your vision into reality. We have the expertise to change ideas into innovative applications, dreams into dynamic websites and sketches to sophisticated softwares.  With state-of-the-art technological expertise and a virtual team of professionals from around the globe, we are here to transform your business.",
     cta: {
       text: "Get Started",
     },
     quote: {
-      text: "Friends, such as we desire, are dreams and fables. Friendship demands the ability to do without it.",
-      author: "Ralph Waldo Emerson",
+      text: "Design is not just what it looks like and feels like. Design is how it works.",
+      author: "Steve Jobs",
     },
   },
   services: {
     id: "services",
     mainHeading: "Services",
     description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut \n labore et dolore magna aliquyam erat, sed diam voluptua.",
+      "Provides custom solutions, tailor-made services and continuous product support.",
     servicesList: [
       {
-        icon: "roller",
-        title: "Graphic Design",
+        icon: "software",
+        title: "Software Development",
         subtitle:
-          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+          "Specialize in developing software according to your unique needs and business challenges.",
       },
       {
-        icon: "monitor",
-        title: "Web Design",
+        icon: "web-development",
+        title: "Web Development",
         subtitle:
-          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.",
+          "Specializes in building responsive, scalable, and device-friendly websites or a chain of complex web applications with a seamless user experience.",
       },
       {
-        icon: "browser",
-        title: "Development",
+        icon: "mobile",
+        title: "Mobile App Development",
         subtitle:
-          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
+          "Specialized in designing applications that perform smoothly on across platforms and operating systems with a promise of superior user experience",
       },
       {
-        icon: "printer",
-        title: "Print",
+        icon: "strategy",
+        title: "Digital Strategy & Planning",
         subtitle:
-          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.",
+          "We make your brand stand out in the competitive landscape by leveraging competitive analysis, market insights and industry trends.",
       },
       {
-        icon: "roller",
-        title: "Graphic Design",
+        icon: "design",
+        title: "Digital Product Design",
         subtitle:
-          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+          "Creating intuitive and interactive experiences through specialized User Experience Design (UX) and User Interface Design (UI)",
       },
       {
-        icon: "browser",
-        title: "Development",
+        icon: "teams",
+        title: "Virtual Teams",
         subtitle:
-          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
+          "Our virtual team of experts and professionals from all around the globe ensure the constant maintenance, upgradation and performance of your product",
       },
     ],
     clientsList: [
@@ -108,9 +108,8 @@ export const landingData = {
   },
   portfolio: {
     id: "portfolio",
-    mainHeading: "Our Awesome Projects",
-    description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut \n labore et dolore magna aliquyam erat, sed diam voluptua.",
+    mainHeading: "Portfolio",
+    description: "Proudly presenting our product, projects, and work",
     projectsList: [
       {
         img: ProjectImg1,
@@ -206,9 +205,8 @@ export const landingData = {
   },
   testimonials: {
     id: "testimonials",
-    mainHeading: "What They Say?",
-    description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut\nlabore et dolore magna aliquyam erat, sed diam voluptua.",
+    mainHeading: "Testimonials",
+    description: "We believe in making long-term commitments.",
     testimonialsList: [
       {
         text: "Our team loves Bodacious Bulls for its ease of use and powerful capabilities. Their support is always prompt and efficient. It's a vital tool for our growth.",

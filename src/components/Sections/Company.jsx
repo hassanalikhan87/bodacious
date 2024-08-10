@@ -1,52 +1,52 @@
 import React from "react";
 import styled from "styled-components";
 // Components
-import FullButton from "../Buttons/FullButton";
+import CallToAction from "../Buttons/CallToAction";
 // Assets
 import HeaderImage from "../../assets/img/header-img.png";
 import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
+import { COLOR } from "../../constants/styles/color";
+import { MEDIA_QUERY } from "../../constants/styles/media-query";
+import { SPACING } from "../../constants/styles/spacing";
+import { SIZE } from "../../constants/styles/sizes";
+import { TYPOGRAPHY } from "../../constants/styles/typography";
 
 export default function Company({ data }) {
   const { id, mainHeading, description, cta, quote } = data;
   return (
-    <Wrapper id={id} className="container flexSpaceCenter">
-      <LeftSide className="flexCenter">
+    <Wrapper id={id}>
+      <LeftSide>
         <div>
-          <h1 className="extraBold font60">{mainHeading}</h1>
-          <HeaderP className="font13 semiBold">{description}</HeaderP>
-          <BtnWrapper>
-            <FullButton title={cta.text} />
-          </BtnWrapper>
+          <Heading>{mainHeading}</Heading>
+          <Description>{description}</Description>
+          <CallToAction
+            title={cta.text}
+            destination={"portfolio"}
+            offset={80}
+            border={"none"}
+            backgroundcolor={COLOR.fatRed}
+            color={COLOR.fatLight}
+          />
         </div>
       </LeftSide>
       <RightSide>
         <ImageWrapper>
-          <Img
-            className="radius8"
-            src={HeaderImage}
-            alt="office"
-            style={{ zIndex: 9 }}
-          />
-          <QuoteWrapper className="flexCenter darkBg radius8">
-            <QuotesWrapper>
-              <QuotesIcon />
-            </QuotesWrapper>
-            <div>
-              <p className="font15 whiteColor">
-                <em>{quote.text}</em>
-              </p>
-              <p
-                className="font13 orangeColor textRight"
-                style={{ marginTop: "10px" }}
-              >
-                {quote.author}
-              </p>
-            </div>
-          </QuoteWrapper>
           <DotsWrapper>
             <Dots />
           </DotsWrapper>
+          <Img src={HeaderImage} alt="office" />
+          <QuoteWrapper>
+            <QuotesWrapper>
+              <StyledQuotesIcon />
+            </QuotesWrapper>
+            <div>
+              <p>
+                <Quote>{quote.text}</Quote>
+              </p>
+              <Author>{quote.author}</Author>
+            </div>
+          </QuoteWrapper>
         </ImageWrapper>
       </RightSide>
     </Wrapper>
@@ -54,61 +54,63 @@ export default function Company({ data }) {
 }
 
 const Wrapper = styled.section`
-  padding-top: 80px;
-  width: 100%;
-  min-height: 840px;
-  @media (max-width: 960px) {
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  padding: 0 ${SPACING.s2};
+  background-color: ${COLOR.fatLight};
+  min-height: 100vh;
+  ${MEDIA_QUERY.above.desktop} {
+    flex-direction: row;
+    gap: 20px;
+    max-width: ${SIZE.maxWidth};
+    margin: 0 auto;
+    padding: 0 ${SPACING.s15};
   }
 `;
 const LeftSide = styled.div`
-  width: 50%;
-  height: 100%;
-  @media (max-width: 960px) {
-    width: 100%;
-    order: 2;
-    margin: 50px 0;
-    text-align: center;
-  }
-  @media (max-width: 560px) {
-    margin: 80px 0 50px 0;
+  order: 2;
+  text-align: center;
+  ${MEDIA_QUERY.above.desktop} {
+    flex: 2;
+    margin-top: 100px;
+    justify-content: flex-start;
+    text-align: left;
+    order: unset;
+    width: auto;
+    padding: 0 ${SPACING.s20} 0 0;
   }
 `;
+const Heading = styled.h1`
+  ${TYPOGRAPHY.h1}
+  color: ${COLOR.fatDark};
+  padding: 0 0 ${SPACING.s4} 0;
+`;
+
 const RightSide = styled.div`
-  width: 50%;
-  height: 100%;
-  @media (max-width: 960px) {
-    width: 100%;
-    order: 1;
-    margin-top: 30px;
+  display: block;
+  margin: 100px auto 0;
+  order: 1;
+  text-align: -webkit-center;
+  ${MEDIA_QUERY.above.desktop} {
+    flex: 3;
+    order: unset;
+    width: unset;
   }
 `;
-const HeaderP = styled.div`
-  max-width: 470px;
-  padding: 15px 0 50px 0;
-  line-height: 1.5rem;
-  @media (max-width: 960px) {
-    padding: 15px 0 50px 0;
-    text-align: center;
-    max-width: 100%;
-  }
-`;
-const BtnWrapper = styled.div`
-  max-width: 190px;
-  @media (max-width: 960px) {
-    margin: 0 auto;
+const Description = styled.p`
+  ${TYPOGRAPHY.p}
+  color: ${COLOR.fatDark};
+  padding: ${SPACING.s4} 0;
+  ${MEDIA_QUERY.above.desktop} {
+    padding: ${SPACING.s15} 0;
   }
 `;
 
 const ImageWrapper = styled.div`
-  display: flex;
-  justify-content: flex-end;
   position: relative;
   z-index: 9;
-  @media (max-width: 960px) {
-    width: 100%;
-    justify-content: center;
-  }
+  height: fit-content;
+  width: fit-content;
 `;
 const Img = styled.img`
   @media (max-width: 560px) {
@@ -116,30 +118,52 @@ const Img = styled.img`
     height: auto;
   }
 `;
+
+const StyledQuotesIcon = styled(QuotesIcon)`
+  color: ${COLOR.fatGreen};
+`;
 const QuoteWrapper = styled.div`
   position: absolute;
-  left: 0;
+  left: -5px;
   bottom: 50px;
-  max-width: 330px;
-  padding: 30px;
+  border-radius: 25px;
   z-index: 99;
-  @media (max-width: 960px) {
-    left: 20px;
+  max-width: 70%;
+  text-align: left;
+  background-color: ${COLOR.fatDark};
+  padding: ${SPACING.s4};
+  ${MEDIA_QUERY.above.smallMobile} {
+    left: -75px;
   }
-  @media (max-width: 560px) {
-    bottom: -50px;
+
+  color: ${COLOR.fatLight};
+  ${MEDIA_QUERY.above.desktop} {
+    left: -20%;
+    padding: ${SPACING.s8};
+    max-width: 330px;
   }
+`;
+
+const Quote = styled.em`
+  align-self: left;
+`;
+const Author = styled.p`
+  text-align: right;
 `;
 const QuotesWrapper = styled.div`
   position: absolute;
-  left: -20px;
+  left: 0px;
   top: -10px;
+  color: ${COLOR.fatLight};
+  ${MEDIA_QUERY.above.desktop} {
+    left: -20px;
+  }
 `;
 const DotsWrapper = styled.div`
   position: absolute;
-  right: -100px;
+  right: -50px;
   bottom: 100px;
-  z-index: 2;
+  z-index: -1;
   @media (max-width: 960px) {
     right: 100px;
   }

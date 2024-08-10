@@ -15,10 +15,10 @@ export default function Landing() {
       <TopNavbar data={landingData.navigation} />
       <Company data={landingData.company} />
       <Services data={landingData.services} />
-      <Portfolio data={landingData.portfolio} />
-      <Testimonials data={landingData.testimonials} />
-      <Contact />
-      <Footer />
+      {/* <Portfolio data={landingData.portfolio} /> */}
+      {/* <Testimonials data={landingData.testimonials} /> */}
+      {/* <Contact /> */}
+      {/* <Footer /> */}
     </>
   );
 }

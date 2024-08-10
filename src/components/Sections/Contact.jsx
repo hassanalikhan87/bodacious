@@ -90,7 +90,7 @@ const Wrapper = styled.section`
   width: 100%;
 `;
 const HeaderInfo = styled.div`
-  padding: 70px 0 30px 0;
+  padding: 30px 0;
   @media (max-width: 860px) {
     text-align: center;
   }

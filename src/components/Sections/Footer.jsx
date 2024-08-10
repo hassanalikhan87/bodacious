@@ -23,8 +23,9 @@ export default function Contact() {
               smooth={true}
               offset={-80}
             >
-              <LogoImg className="whiteColor" />
-              <h1 className="font15 extraBold whiteColor">Bodacious Bulls</h1>
+              <h1 className="font15 extraBold whiteColor">BODACIOUS</h1>
+
+              <LogoImg className="whiteColor paddingLeft" />
             </Link>
             <StyleP className="whiteColor font13">
               © {getCurrentYear()} -{" "}

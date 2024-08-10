@@ -1,89 +1,88 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useEffect, useState } from "react";
+import styled, { css } from "styled-components";
 import { Link } from "react-scroll";
-// Assets
-import CloseIcon from "../../assets/svg/CloseIcon";
-import LogoIcon from "../../assets/svg/Logo";
+// Constants
+import { MEDIA_QUERY } from "../../constants/styles/media-query";
+import { COLOR } from "../../constants/styles/color";
+import { TYPOGRAPHY } from "../../constants/styles/typography";
+import CallToAction from "../Buttons/CallToAction";
 
 export default function Sidebar({ data, sidebarOpen, toggleSidebar }) {
   const { main, side } = data;
-  return (
-    <Wrapper className="animate darkBg" sidebarOpen={sidebarOpen}>
-      <SidebarHeader className="flexSpaceCenter">
-        <div className="flexNullCenter">
-          <LogoIcon className="whiteColor" />
-          <h1 className="whiteColor font20">Bodacious Bulls</h1>
-        </div>
-        <CloseBtn
-          onClick={() => toggleSidebar(!sidebarOpen)}
-          className="animate pointer"
-        >
-          <CloseIcon />
-        </CloseBtn>
-      </SidebarHeader>
+  const [y, setY] = useState(window.scrollY);
 
-      <UlStyle className="flexNullCenter flexColumn">
+  useEffect(() => {
+    window.addEventListener("scroll", () => setY(window.scrollY));
+    return () => {
+      window.removeEventListener("scroll", () => setY(window.scrollY));
+    };
+  }, [y]);
+  return (
+    <Wrapper sidebarOpen={sidebarOpen} $top={y > 100 ? "60px" : "80px"}>
+      <NavContainer className="flexNullCenter flexColumn">
         {main.map((nav, i) => {
           return (
-            <li className="semiBold font15 pointer">
-              <Link
-                onClick={() => toggleSidebar(!sidebarOpen)}
-                activeClass="active"
-                className="whiteColor"
-                style={{ padding: "10px 15px" }}
-                to={nav.to}
-                spy={true}
-                smooth={true}
-                offset={-60}
-              >
-                {nav.text}
-              </Link>
-            </li>
+            <StyledLink
+              key={i}
+              onClick={() => toggleSidebar(!sidebarOpen)}
+              activeClass="active_mobile"
+              className="whiteColor"
+              style={{ padding: "10px 15px" }}
+              to={nav.to}
+              spy={true}
+              smooth={true}
+              offset={-60}
+            >
+              {nav.text}
+            </StyledLink>
           );
         })}
-      </UlStyle>
-      <UlStyle className="flexNullenter">
-        {side.map((nav, i) => {
+      </NavContainer>
+      <NavContainer className="flexNullCenter flexColumn">
+        {side.map((cta, i) => {
           return (
-            <li className="semiBold font15 pointer flexCenter">
-              <a
-                key={i}
-                href={nav.href}
-                className="radius8 lightBg"
-                style={{ padding: "10px 15px" }}
-              >
-                {nav.text}
-              </a>
-            </li>
+            <CallToAction
+              key={i}
+              title={cta.text}
+              destination={"portfolio"}
+              offset={80}
+              border={"none"}
+              backgroundcolor={COLOR.fatLight}
+              color={COLOR.fatDark}
+            />
           );
         })}
-      </UlStyle>
+      </NavContainer>
     </Wrapper>
   );
 }
 
 const Wrapper = styled.nav`
-  width: 400px;
-  height: 100vh;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
   position: fixed;
-  top: 0;
-  padding: 0 30px;
-  right: ${(props) => (props.sidebarOpen ? "0px" : "-400px")};
+  ${({ $top }) =>
+    $top &&
+    css`
+      top: ${$top};
+    `}
+  padding: 0;
+  right: -500px;
+  transition: transform 0.5s linear;
+  transform: ${(props) => (props.sidebarOpen ? "translateX(-500px)" : "none")};
   z-index: 9999;
-  @media (max-width: 400px) {
-    width: 100%;
+  background-color: ${COLOR.fatRed};
+  ${MEDIA_QUERY.above.desktop} {
+    display: none;
   }
 `;
-const SidebarHeader = styled.div`
-  padding: 20px 0;
+
+const StyledLink = styled(Link)`
+  ${TYPOGRAPHY.navLink}
+  font-size: 14px;
 `;
-const CloseBtn = styled.button`
-  border: 0px;
-  outline: none;
-  background-color: transparent;
-  padding: 10px;
-`;
-const UlStyle = styled.ul`
+const NavContainer = styled.div`
   padding: 40px;
   li {
     margin: 20px 0;

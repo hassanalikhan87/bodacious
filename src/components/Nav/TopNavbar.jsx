@@ -5,8 +5,15 @@ import { Link } from "react-scroll";
 import Sidebar from "../Nav/Sidebar";
 import Backdrop from "../Elements/Backdrop";
 // Assets
-import LogoIcon from "../../assets/svg/Logo";
 import BurgerIcon from "../../assets/svg/BurgerIcon";
+import CloseIcon from "../../assets/svg/CloseIcon";
+// Constants
+import { SPACING } from "../../constants/styles/spacing";
+import { TYPOGRAPHY } from "../../constants/styles/typography";
+import { COLOR } from "../../constants/styles/color";
+import { MEDIA_QUERY } from "../../constants/styles/media-query";
+import { SIZE } from "../../constants/styles/sizes";
+import BodaciousLogo from "../Elements/BodaciousLogo";
 
 export default function TopNavbar({ data }) {
   const [y, setY] = useState(window.scrollY);
@@ -29,53 +36,34 @@ export default function TopNavbar({ data }) {
         toggleSidebar={toggleSidebar}
       />
       {sidebarOpen && <Backdrop toggleSidebar={toggleSidebar} />}
-      <Wrapper
-        className="flexCenter animate whiteBg"
-        style={y > 100 ? { height: "60px" } : { height: "80px" }}
-      >
-        <NavInner className="container flexSpaceCenter">
-          <Link className="pointer flexNullCenter" to="home" smooth={true}>
-            <LogoIcon className="purpleColor" />
-            <h1 className="font20 extraBold">Bodacious Bulls</h1>
-          </Link>
-          <BurderWrapper
-            className="pointer"
-            onClick={() => toggleSidebar(!sidebarOpen)}
-          >
-            <BurgerIcon />
-          </BurderWrapper>
-          <UlWrapper className="flexNullCenter">
+      <Wrapper style={{ height: "80px" }}>
+        <NavInner>
+          <BodaciousLogo logoText="bodaciousbulls" path="companyy" />
+          <BurgerButton onClick={() => toggleSidebar(!sidebarOpen)}>
+            {!sidebarOpen ? <BurgerIcon /> : <CloseIcon />}
+          </BurgerButton>
+          <UlWrapper>
             {main.map((nav, i) => {
               return (
-                <li className="semiBold font15 pointer">
-                  <Link
-                    key={i}
-                    activeClass="active"
-                    style={{ padding: "10px 15px" }}
-                    to={nav.to}
-                    spy={true}
-                    smooth={true}
-                    offset={-80}
-                  >
-                    {nav.text}
-                  </Link>
-                </li>
+                <StyledLink
+                  key={i}
+                  activeClass="active"
+                  to={nav.to}
+                  spy={true}
+                  smooth={true}
+                  offset={-80}
+                >
+                  <h1>{nav.text}</h1>
+                </StyledLink>
               );
             })}
           </UlWrapper>
-          <UlWrapperRight className="flexNullCenter">
+          <UlWrapperRight>
             {side.map((nav, i) => {
               return (
-                <li className="semiBold font15 pointer flexCenter">
-                  <a
-                    key={i}
-                    href={nav.href}
-                    className="radius8 whiteColor tealBg"
-                    style={{ padding: "10px 15px" }}
-                  >
-                    {nav.text}
-                  </a>
-                </li>
+                <a key={i} href={nav.href}>
+                  {nav.text}
+                </a>
               );
             })}
           </UlWrapperRight>
@@ -85,36 +73,93 @@ export default function TopNavbar({ data }) {
   );
 }
 
+// const LogoLink = styled(Link)`
+//   display: flex;
+//   align-items: center;
+//   color: ${COLOR.fatLight};
+//   padding: ${SPACING.s2} ${SPACING.s4};
+//   background-color: ${COLOR.fatRed};
+//   cursor: pointer;
+//   strong {
+//     ${TYPOGRAPHY.logo}
+//   }
+//
+// `;
+
 const Wrapper = styled.nav`
-  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   z-index: 999;
+  background-color: ${COLOR.fatRed};
+  ${MEDIA_QUERY.above.desktop} {
+    background-color: ${COLOR.fatLight};
+  }
 `;
 const NavInner = styled.div`
-  position: relative;
+  display: flex;
+  justify-content: space-between;
   height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  max-width: ${SIZE.maxWidth};
+  ${MEDIA_QUERY.above.desktop} {
+    padding: 0px ${SPACING.s15};
+  }
 `;
-const BurderWrapper = styled.button`
+const BurgerButton = styled.button`
+  display: block;
   outline: none;
   border: 0px;
   background-color: transparent;
+  color: ${COLOR.fatLight};
   height: 100%;
   padding: 0 15px;
+  ${MEDIA_QUERY.above.desktop} {
+    display: none;
+  }
+`;
+
+const UlWrapper = styled.div`
   display: none;
-  @media (max-width: 760px) {
-    display: block;
+  ${MEDIA_QUERY.above.desktop} {
+    display: flex;
+    height: 100%;
+    align-items: center;
   }
 `;
-const UlWrapper = styled.ul`
+
+const StyledLink = styled(Link)`
+  ${TYPOGRAPHY.navLink}
   display: flex;
-  @media (max-width: 760px) {
-    display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0 ${SPACING.s4};
+  border-bottom: 2px solid transparent;
+  height: 100%;
+  color: ${COLOR.fatDark};
+  cursor: pointer;
+  &:active,
+  &:hover,
+  &:focus {
+    color: ${COLOR.fatRed};
+    border-bottom: 2px solid ${COLOR.fatRed};
   }
 `;
+
 const UlWrapperRight = styled.ul`
-  @media (max-width: 760px) {
-    display: none;
+  display: none;
+  ${MEDIA_QUERY.above.desktop} {
+    display: flex;
+    align-items: center;
+    a {
+      ${TYPOGRAPHY.navLink}
+      text-decoration: none;
+      color: ${COLOR.fatLight};
+      background-color: ${COLOR.fatGreen};
+      padding: ${SPACING.s2} ${SPACING.s4};
+      border-radius: 10px;
+    }
   }
 `;

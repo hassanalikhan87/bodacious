@@ -4,6 +4,10 @@ import { Button } from "react-scroll";
 // Components
 import ProjectBox from "../Elements/ProjectBox";
 import FullButton from "../Buttons/FullButton";
+import { SPACING } from "../../constants/styles/spacing";
+import { MEDIA_QUERY } from "../../constants/styles/media-query";
+import { SIZE } from "../../constants/styles/sizes";
+import { COLOR } from "../../constants/styles/color";
 // Assets
 // import AddImage2 from "../../assets/img/add/add2.png";
 
@@ -21,7 +25,7 @@ export default function Portfolio({ data }) {
 
   return (
     <Wrapper id={id} ref={portfolioRef}>
-      <div className="whiteBg">
+      <Container className="whiteBg">
         <div className="container">
           <HeaderInfo>
             <h1 className="font40 extraBold">{mainHeading}</h1>
@@ -31,12 +35,8 @@ export default function Portfolio({ data }) {
             {projectsList.map((project, i) => {
               if (i < projectsCount) {
                 return (
-                  <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <ProjectBox
-                      key={i}
-                      action={() => alert("clicked")}
-                      {...project}
-                    />
+                  <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4" key={i}>
+                    <ProjectBox action={() => alert("clicked")} {...project} />
                   </div>
                 );
               } else {
@@ -61,12 +61,27 @@ export default function Portfolio({ data }) {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </Wrapper>
   );
 }
 
 const Wrapper = styled.section`
+  display: flex;
+  flex-direction: column;
+  margin: ${SPACING.s20} auto 0;
+  padding: 0 ${SPACING.s15};
+  width: 100%;
+  background-color: ${COLOR.fatLight};
+  ${MEDIA_QUERY.above.desktop} {
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+    max-width: ${SIZE.maxWidth};
+  }
+`;
+
+const Container = styled.section`
   width: 100%;
 `;
 const HeaderInfo = styled.div`
