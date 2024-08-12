@@ -5,19 +5,31 @@ import { MEDIA_QUERY } from "./media-query";
 export const TYPOGRAPHY = {
   logo: css`
     font-family: ${FONT.stack};
-    font-size: 48px;
+    font-size: 30px;
     font-weight: ${FONT_WEIGHT.bold};
-    line-height: 48px;
+    line-height: 30px;
     letter-spacing: 1px;
     margin: 0;
+    ${MEDIA_QUERY.above.desktop} {
+      font-size: 36px;
+      line-height: 36px;
+    }
+    ${MEDIA_QUERY.above.largeDesktop} {
+      font-size: 40px;
+      line-height: 40px;
+    }
   `,
   navLink: css`
     font-family: ${FONT.stack};
     font-size: 16px;
     font-weight: ${FONT_WEIGHT.bold};
-    line-height: 20px;
+    line-height: 16px;
     letter-spacing: 0em;
     margin: 0;
+    ${MEDIA_QUERY.above.largeDesktop} {
+      font-size: 18px;
+      line-height: 18px;
+    }
   `,
   h1: css`
     font-family: ${FONT.stack};
