@@ -121,7 +121,10 @@ const Description = styled.p`
   color: ${COLOR.fatDark};
   padding: ${SPACING.s4} 0;
   ${MEDIA_QUERY.above.desktop} {
-    padding: ${SPACING.s5} 0;
+    padding: 40px 0;
+  }
+  ${MEDIA_QUERY.above.largeDesktop} {
+    padding: 80px 0;
   }
 `;
 

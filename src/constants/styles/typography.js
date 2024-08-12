@@ -34,14 +34,18 @@ export const TYPOGRAPHY = {
   `,
   h1: css`
     font-family: ${FONT.stack};
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 32px;
+    line-height: 32px;
     letter-spacing: 0em;
     margin: 0;
     font-weight: ${FONT_WEIGHT.bold};
     ${MEDIA_QUERY.above.desktop} {
-      font-size: 60px;
-      line-height: 60px;
+      font-size: 40px;
+      line-height: 40px;
+    }
+    ${MEDIA_QUERY.above.largeDesktop} {
+      font-size: 48px;
+      line-height: 48px;
     }
   `,
   h2: css`
