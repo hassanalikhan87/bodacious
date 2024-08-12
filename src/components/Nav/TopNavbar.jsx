@@ -92,9 +92,9 @@ const Wrapper = styled.nav`
   left: 0;
   right: 0;
   z-index: 999;
-  background-color: ${COLOR.fatRed};
+  background-color: ${COLOR.boltBlack};
   ${MEDIA_QUERY.above.desktop} {
-    background-color: ${COLOR.fatLight};
+    background-color: ${COLOR.midGrey};
   }
 `;
 const NavInner = styled.div`
@@ -138,13 +138,13 @@ const StyledLink = styled(Link)`
   padding: 0 ${SPACING.s4};
   border-bottom: 2px solid transparent;
   height: 100%;
-  color: ${COLOR.fatDark};
+  color: ${COLOR.boltBlack};
   cursor: pointer;
   &:active,
   &:hover,
   &:focus {
-    color: ${COLOR.fatRed};
-    border-bottom: 2px solid ${COLOR.fatRed};
+    color: ${COLOR.lighteningYellow};
+    border-bottom: 2px solid ${COLOR.lighteningYellow};
   }
 `;
 
@@ -156,10 +156,14 @@ const UlWrapperRight = styled.ul`
     a {
       ${TYPOGRAPHY.navLink}
       text-decoration: none;
-      color: ${COLOR.fatLight};
-      background-color: ${COLOR.fatGreen};
+      color: ${COLOR.lighteningYellow};
+      background-color: ${COLOR.boltBlack};
       padding: ${SPACING.s2} ${SPACING.s4};
       border-radius: 10px;
+      &:hover {
+        background-color: ${COLOR.lighteningYellow};
+        color: ${COLOR.boltBlack};
+      }
     }
   }
 `;

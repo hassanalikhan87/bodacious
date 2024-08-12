@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 // Components
-import ClientSlider from "../Elements/ClientSlider";
 import ServiceBox from "../Elements/ServiceBox";
 import { SIZE } from "../../constants/styles/sizes";
 import { SPACING } from "../../constants/styles/spacing";
@@ -10,30 +9,25 @@ import { MEDIA_QUERY } from "../../constants/styles/media-query";
 import { TYPOGRAPHY } from "../../constants/styles/typography";
 
 export default function Services({ data }) {
-  const { id, mainHeading, description, servicesList, clientsList } = data;
+  const { id, mainHeading, description, servicesList } = data;
   return (
-    <>
-      <SliderContainer id={id}>
-        <ClientSlider data={clientsList} />
-      </SliderContainer>
-      <Wrapper>
-        <ServicesContainer>
-          <HeaderInfo>
-            <Heading>{mainHeading}</Heading>
-            <Description>{description}</Description>
-          </HeaderInfo>
-          <ServiceBoxRow>
-            {servicesList.map((service, i) => {
-              return (
-                <ServiceBoxWrapper key={i}>
-                  <ServiceBox {...service} />
-                </ServiceBoxWrapper>
-              );
-            })}
-          </ServiceBoxRow>
-        </ServicesContainer>
-      </Wrapper>
-    </>
+    <Wrapper id={id}>
+      <ServicesContainer>
+        <HeaderInfo>
+          <Heading>{mainHeading}</Heading>
+          <Description>{description}</Description>
+        </HeaderInfo>
+        <ServiceBoxRow>
+          {servicesList.map((service, i) => {
+            return (
+              <ServiceBoxWrapper key={i}>
+                <ServiceBox {...service} />
+              </ServiceBoxWrapper>
+            );
+          })}
+        </ServiceBoxRow>
+      </ServicesContainer>
+    </Wrapper>
   );
 }
 
@@ -46,12 +40,6 @@ const Wrapper = styled.section`
     margin: 0 auto;
     align-items: center;
   }
-`;
-
-const SliderContainer = styled.div`
-  background-color: ${COLOR.fatRed};
-  margin: 0;
-  padding: ${SPACING.s10} 0;
 `;
 
 const ServicesContainer = styled.div`

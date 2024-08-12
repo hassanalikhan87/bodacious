@@ -38,6 +38,7 @@ const StyledButton = styled(Button)`
   outline: none;
   color: ${(props) => props.color};
   :hover {
-    opacity: 0.1;
+    color: ${(props) => props.backgroundcolor};
+    background-color: ${(props) => props.color};
   }
 `;

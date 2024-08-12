@@ -1,6 +1,5 @@
 export const FONT = {
-  stack1: '"Russo One", sans-serif',
-  stack2: '"The Sans", sans-serif',
+  stack: '"Titillium Web", sans-serif',
 };
 
 export const FONT_WEIGHT = {

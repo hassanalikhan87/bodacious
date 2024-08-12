@@ -30,4 +30,5 @@ const ImgStyle = styled.img`
   width: 100%;
   height: 100%;
   margin: 0 ${SPACING.s6};
+  color: red;
 `;

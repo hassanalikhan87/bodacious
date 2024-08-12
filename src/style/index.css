@@ -51,8 +51,8 @@ body {
   width: 100%;
 }
 .active {
-  border-bottom: 2px solid #ed1c24 !important;
-  color: #ed1c24 !important;
+  border-bottom: 2px solid #e1ff00 !important;
+  color: #e1ff00 !important;
 }
 .active-mobile {
   border-bottom: 2px solid #f2f2f2 !important;
