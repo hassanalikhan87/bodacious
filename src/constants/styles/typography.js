@@ -21,14 +21,15 @@ export const TYPOGRAPHY = {
   `,
   navLink: css`
     font-family: ${FONT.stack};
-    font-size: 16px;
-    font-weight: ${FONT_WEIGHT.bold};
-    line-height: 16px;
+    font-size: 14px;
+    font-weight: ${FONT_WEIGHT.semiBold};
+    line-height: 14px;
     letter-spacing: 0em;
     margin: 0;
     ${MEDIA_QUERY.above.largeDesktop} {
-      font-size: 18px;
-      line-height: 18px;
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: ${FONT_WEIGHT.bold};
     }
   `,
   h1: css`
