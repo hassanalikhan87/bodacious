@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/bodacious/static/css/main.ae85f06b.chunk.css",
-    "main.js": "/bodacious/static/js/main.c1c6de7e.chunk.js",
-    "main.js.map": "/bodacious/static/js/main.c1c6de7e.chunk.js.map",
+    "main.css": "/bodacious/static/css/main.18764ede.chunk.css",
+    "main.js": "/bodacious/static/js/main.7fc4489c.chunk.js",
+    "main.js.map": "/bodacious/static/js/main.7fc4489c.chunk.js.map",
     "runtime-main.js": "/bodacious/static/js/runtime-main.1b2f2591.js",
     "runtime-main.js.map": "/bodacious/static/js/runtime-main.1b2f2591.js.map",
     "static/css/2.25da1874.chunk.css": "/bodacious/static/css/2.25da1874.chunk.css",
@@ -12,21 +12,21 @@
     "static/js/3.6cd5e9c8.chunk.js.map": "/bodacious/static/js/3.6cd5e9c8.chunk.js.map",
     "index.html": "/bodacious/index.html",
     "static/css/2.25da1874.chunk.css.map": "/bodacious/static/css/2.25da1874.chunk.css.map",
-    "static/css/main.ae85f06b.chunk.css.map": "/bodacious/static/css/main.ae85f06b.chunk.css.map",
+    "static/css/main.18764ede.chunk.css.map": "/bodacious/static/css/main.18764ede.chunk.css.map",
     "static/js/2.ede7d955.chunk.js.LICENSE.txt": "/bodacious/static/js/2.ede7d955.chunk.js.LICENSE.txt",
-    "static/media/logo01.4dd2a36d.svg": "/bodacious/static/media/logo01.4dd2a36d.svg",
-    "static/media/logo02.673afd37.svg": "/bodacious/static/media/logo02.673afd37.svg",
-    "static/media/logo03.3b1626e5.svg": "/bodacious/static/media/logo03.3b1626e5.svg",
-    "static/media/logo04.fd68e097.svg": "/bodacious/static/media/logo04.fd68e097.svg",
-    "static/media/logo05.62934bc4.svg": "/bodacious/static/media/logo05.62934bc4.svg",
-    "static/media/logo06.529ca11f.svg": "/bodacious/static/media/logo06.529ca11f.svg",
+    "static/media/logo01.dbe10f14.svg": "/bodacious/static/media/logo01.dbe10f14.svg",
+    "static/media/logo02.334c23d8.svg": "/bodacious/static/media/logo02.334c23d8.svg",
+    "static/media/logo03.e511b0f8.svg": "/bodacious/static/media/logo03.e511b0f8.svg",
+    "static/media/logo04.76b41bb8.svg": "/bodacious/static/media/logo04.76b41bb8.svg",
+    "static/media/logo05.10dda4e0.svg": "/bodacious/static/media/logo05.10dda4e0.svg",
+    "static/media/logo06.23c94bba.svg": "/bodacious/static/media/logo06.23c94bba.svg",
     "static/media/slick-theme.css": "/bodacious/static/media/slick.c94f7671.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.1b2f2591.js",
     "static/css/2.25da1874.chunk.css",
     "static/js/2.ede7d955.chunk.js",
-    "static/css/main.ae85f06b.chunk.css",
-    "static/js/main.c1c6de7e.chunk.js"
+    "static/css/main.18764ede.chunk.css",
+    "static/js/main.7fc4489c.chunk.js"
   ]
 }
