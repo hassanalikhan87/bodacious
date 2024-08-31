@@ -50,8 +50,12 @@ const Wrapper = styled.section`
   position: relative;
   flex-direction: column;
   background-color: ${COLOR.midGrey};
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
   margin-top: 80px;
+    ${MEDIA_QUERY.above.desktop} {
+    min-height: 100vh;
+    margin-top: 0;
+  }
 `;
 
 const Container = styled.div`
