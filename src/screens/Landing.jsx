@@ -3,10 +3,10 @@ import React from "react";
 import TopNavbar from "../components/Nav/TopNavbar";
 import Company from "../components/Sections/Company";
 import Services from "../components/Sections/Services";
-import Portfolio from "../components/Sections/Portfolio";
-import Testimonials from "../components/Sections/Testimonials";
-import Contact from "../components/Sections/Contact";
-import Footer from "../components/Sections/Footer";
+// import Portfolio from "../components/Sections/Portfolio";
+// import Testimonials from "../components/Sections/Testimonials";
+// import Contact from "../components/Sections/Contact";
+// import Footer from "../components/Sections/Footer";
 import { landingData } from "./landing.data";
 
 export default function Landing() {
