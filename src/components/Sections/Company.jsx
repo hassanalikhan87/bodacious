@@ -61,7 +61,6 @@ const Wrapper = styled.section`
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 180px);
   padding: 0 ${SPACING.s2};
   ${MEDIA_QUERY.above.desktop} {
     flex-direction: row;
