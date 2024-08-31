@@ -62,10 +62,10 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 ${SPACING.s2};
+  height: 100vh;
   ${MEDIA_QUERY.above.desktop} {
     flex-direction: row;
     gap: 20px;
-    height: 100vh;
     max-width: ${SIZE.maxWidth};
     margin: 0 auto;
     padding: 0 ${SPACING.s15};
