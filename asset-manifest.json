@@ -1,32 +1,29 @@
 {
   "files": {
     "main.css": "/bodacious/static/css/main.18764ede.chunk.css",
-    "main.js": "/bodacious/static/js/main.09cbbfec.chunk.js",
-    "main.js.map": "/bodacious/static/js/main.09cbbfec.chunk.js.map",
-    "runtime-main.js": "/bodacious/static/js/runtime-main.1b2f2591.js",
-    "runtime-main.js.map": "/bodacious/static/js/runtime-main.1b2f2591.js.map",
-    "static/css/2.25da1874.chunk.css": "/bodacious/static/css/2.25da1874.chunk.css",
-    "static/js/2.ede7d955.chunk.js": "/bodacious/static/js/2.ede7d955.chunk.js",
-    "static/js/2.ede7d955.chunk.js.map": "/bodacious/static/js/2.ede7d955.chunk.js.map",
-    "static/js/3.6cd5e9c8.chunk.js": "/bodacious/static/js/3.6cd5e9c8.chunk.js",
-    "static/js/3.6cd5e9c8.chunk.js.map": "/bodacious/static/js/3.6cd5e9c8.chunk.js.map",
+    "main.js": "/bodacious/static/js/main.8ba216be.chunk.js",
+    "main.js.map": "/bodacious/static/js/main.8ba216be.chunk.js.map",
+    "runtime-main.js": "/bodacious/static/js/runtime-main.f2e6e29f.js",
+    "runtime-main.js.map": "/bodacious/static/js/runtime-main.f2e6e29f.js.map",
+    "static/js/2.4e460a77.chunk.js": "/bodacious/static/js/2.4e460a77.chunk.js",
+    "static/js/2.4e460a77.chunk.js.map": "/bodacious/static/js/2.4e460a77.chunk.js.map",
+    "static/js/3.2bb7fd28.chunk.js": "/bodacious/static/js/3.2bb7fd28.chunk.js",
+    "static/js/3.2bb7fd28.chunk.js.map": "/bodacious/static/js/3.2bb7fd28.chunk.js.map",
     "index.html": "/bodacious/index.html",
-    "static/css/2.25da1874.chunk.css.map": "/bodacious/static/css/2.25da1874.chunk.css.map",
     "static/css/main.18764ede.chunk.css.map": "/bodacious/static/css/main.18764ede.chunk.css.map",
-    "static/js/2.ede7d955.chunk.js.LICENSE.txt": "/bodacious/static/js/2.ede7d955.chunk.js.LICENSE.txt",
+    "static/js/2.4e460a77.chunk.js.LICENSE.txt": "/bodacious/static/js/2.4e460a77.chunk.js.LICENSE.txt",
+    "static/media/company-cover.bb968d4b.png": "/bodacious/static/media/company-cover.bb968d4b.png",
     "static/media/logo01.dbe10f14.svg": "/bodacious/static/media/logo01.dbe10f14.svg",
     "static/media/logo02.334c23d8.svg": "/bodacious/static/media/logo02.334c23d8.svg",
     "static/media/logo03.e511b0f8.svg": "/bodacious/static/media/logo03.e511b0f8.svg",
     "static/media/logo04.76b41bb8.svg": "/bodacious/static/media/logo04.76b41bb8.svg",
     "static/media/logo05.10dda4e0.svg": "/bodacious/static/media/logo05.10dda4e0.svg",
-    "static/media/logo06.23c94bba.svg": "/bodacious/static/media/logo06.23c94bba.svg",
-    "static/media/slick-theme.css": "/bodacious/static/media/slick.c94f7671.ttf"
+    "static/media/logo06.23c94bba.svg": "/bodacious/static/media/logo06.23c94bba.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.1b2f2591.js",
-    "static/css/2.25da1874.chunk.css",
-    "static/js/2.ede7d955.chunk.js",
+    "static/js/runtime-main.f2e6e29f.js",
+    "static/js/2.4e460a77.chunk.js",
     "static/css/main.18764ede.chunk.css",
-    "static/js/main.09cbbfec.chunk.js"
+    "static/js/main.8ba216be.chunk.js"
   ]
 }
