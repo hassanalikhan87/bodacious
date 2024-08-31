@@ -27,7 +27,6 @@ export default function Company({ data }) {
           <CallToAction
             title={cta.text}
             destination={"portfolio"}
-            offset={80}
             border={"none"}
             backgroundcolor={COLOR.boltBlack}
             color={COLOR.lighteningYellow}
@@ -52,6 +51,7 @@ const Wrapper = styled.section`
   flex-direction: column;
   background-color: ${COLOR.midGrey};
   min-height: 100vh;
+  margin-top: 80px;
 `;
 
 const Container = styled.div`
@@ -74,10 +74,10 @@ const LeftSide = styled.div`
   z-index: 2;
   order: 2;
   text-align: center;
-  margin-bottom: 200px;
   ${MEDIA_QUERY.above.desktop} {
     flex: 1;
     margin-top: 0;
+    margin-bottom: 200px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -168,7 +168,7 @@ const SvgWrapper = styled.div`
 const Description = styled.p`
   ${TYPOGRAPHY.p}
   color: ${COLOR.fatDark};
-  padding: ${SPACING.s4} 0;
+  padding: ${SPACING.s2} 0;
   ${MEDIA_QUERY.above.desktop} {
     padding: 40px 0;
   }
