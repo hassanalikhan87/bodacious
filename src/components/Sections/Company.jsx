@@ -23,7 +23,6 @@ export default function Company({ data }) {
     <Wrapper id={id}>
       <Container>
         <LeftSide>
-          <div>
             <Heading>{mainHeading}</Heading>
             <Description>{description}</Description>
             <CallToAction
@@ -34,7 +33,6 @@ export default function Company({ data }) {
               backgroundcolor={COLOR.boltBlack}
               color={COLOR.lighteningYellow}
             />
-          </div>
         </LeftSide>
         <RightSide>
           <Image src={CompanyCover} />
@@ -77,11 +75,13 @@ const LeftSide = styled.div`
   z-index: 2;
   order: 2;
   text-align: center;
+  margin-bottom: 200px;
   ${MEDIA_QUERY.above.desktop} {
     flex: 1;
-    margin-top: 180px;
-    margin-bottom: 0;
-    justify-content: flex-start;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     text-align: left;
     order: unset;
     width: auto;
