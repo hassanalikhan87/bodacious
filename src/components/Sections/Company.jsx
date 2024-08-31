@@ -16,23 +16,22 @@ import ClientSlider from "../Elements/ClientSlider";
 import Bull from "../../assets/svg/Bull";
 import CompanyCover from "../../assets/img/company-cover.png";
 
-
 export default function Company({ data }) {
   const { id, mainHeading, description, cta, clientsList } = data;
   return (
     <Wrapper id={id}>
       <Container>
         <LeftSide>
-            <Heading>{mainHeading}</Heading>
-            <Description>{description}</Description>
-            <CallToAction
-              title={cta.text}
-              destination={"portfolio"}
-              offset={80}
-              border={"none"}
-              backgroundcolor={COLOR.boltBlack}
-              color={COLOR.lighteningYellow}
-            />
+          <Heading>{mainHeading}</Heading>
+          <Description>{description}</Description>
+          <CallToAction
+            title={cta.text}
+            destination={"portfolio"}
+            offset={80}
+            border={"none"}
+            backgroundcolor={COLOR.boltBlack}
+            color={COLOR.lighteningYellow}
+          />
         </LeftSide>
         <RightSide>
           <Image src={CompanyCover} />
@@ -95,7 +94,7 @@ const Heading = styled.h1`
   width: 100%;
   margin-top: ${SPACING.s5};
   ${MEDIA_QUERY.above.desktop} {
-  margin: 0;
+    margin: 0;
   }
 `;
 
@@ -106,8 +105,11 @@ const RightSide = styled.div`
   align-items: center;
   order: 1;
   text-align: -webkit-center;
-  margin: 180px auto 0;
+  margin: 80px auto 0;
   position: relative;
+  ${MEDIA_QUERY.above.desktop} {
+    margin: 180px auto 0;
+  }
   ${MEDIA_QUERY.above.desktop} {
     flex: 2;
     order: unset;
@@ -121,7 +123,7 @@ const SvgWrapper = styled.div`
   color: ${COLOR.lighteningYellow};
   position: absolute;
   bottom: 0;
-  left:0;
+  left: 0;
   margin-left: auto;
   margin-right: auto;
   svg {
@@ -138,7 +140,7 @@ const SvgWrapper = styled.div`
       max-height: 40vh;
     }
   }
-    ${MEDIA_QUERY.above.tablet} {
+  ${MEDIA_QUERY.above.tablet} {
     svg {
       max-height: 44vh;
       max-width: 80vw;
@@ -187,16 +189,15 @@ const SliderContainer = styled.div`
   }
 `;
 
-
 const Image = styled.img`
   position: relative;
   z-index: 2;
-  width: 60%;  
+  width: 60%;
   ${MEDIA_QUERY.above.desktop} {
     margin: 0 0 180px;
-    width: 100%;  
+    width: 100%;
   }
-    ${MEDIA_QUERY.above.largeDesktop} {
-    width: 70%;  
+  ${MEDIA_QUERY.above.largeDesktop} {
+    width: 70%;
   }
 `;
